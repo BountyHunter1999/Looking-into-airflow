@@ -46,6 +46,10 @@ with DAG(
         python_callable=get_name,
     )
 
-    task3 = PythonOperator(task_id="get_age", python_callable=get_age)
+    task3 = PythonOperator(
+        task_id="get_age",
+        python_callable=get_age,
+    )
+
     # return value will be pushed to xcoms (admin > xcoms)
-    task2 >> task1
+    [task2, task3] >> task1
