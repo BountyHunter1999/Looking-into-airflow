@@ -64,3 +64,10 @@ airflow users create \
   ![DAG RUN and its components](./airflow_2.png)
 
 ## Life Cycle
+
+## Install Python Package
+### Extending Airflow
+
+- `docker build . --tag extending_airflow:latest`
+- then change the image name
+- `docker compose up -d --no-deps --build airflow-webserver airflow-scheduler`
